@@ -1,0 +1,91 @@
+{
+  "navbar": {
+    "about": "About",
+    "services": "Services",
+    "launchApp": "Launch App"
+  },
+  "hero": {
+    "tagline": "Tokamak Network Ecosystem",
+    "titleLine": "Meet",
+    "titleHighlight": "Tokamon",
+    "description": "A cute dinosaur that collects TOKAMAK (TON) tokens\nby exploring, joining events, and playing games!",
+    "ctaPrimary": "Explore Services",
+    "ctaSecondary": "Learn More"
+  },
+  "about": {
+    "label": "About",
+    "titleLine": "Collect While Having Fun",
+    "titleHighlight": "TOKAMAK (TON) Token Life",
+    "subtitle": "With Tokamon, collecting TOKAMAK (TON) tokens is fun. Explore, join events, and play games to naturally accumulate tokens!",
+    "features": [
+      {
+        "icon": "\ud83d\udccd",
+        "title": "Go - Collect on the Move",
+        "desc": "Visit local stores and earn TOKAMAK (TON) tokens. Collect tokens while walking and get stamp bonuses!"
+      },
+      {
+        "icon": "\ud83e\ude82",
+        "title": "Drop - Earn from Events",
+        "desc": "Join airdrop events prepared by Tokamon. Surprise rewards fall from the sky!"
+      },
+      {
+        "icon": "\ud83c\udfae",
+        "title": "Play - Earn While Playing",
+        "desc": "Earn TOKAMAK (TON) tokens by playing mini-games. The more you play, the more tokens you stack!"
+      }
+    ]
+  },
+  "services": {
+    "label": "Services",
+    "titlePrefix": "Enjoy with",
+    "titleHighlight": " Tokamon",
+    "subtitle": "Walk, earn, and play! Three ways to collect TOKAMAK (TON) tokens with Tokamon.",
+    "statusLive": "Live",
+    "statusComing": "Coming Soon",
+    "ctaStart": "Start {{name}}",
+    "flowTitle": "How It Works",
+    "featuresTitle": "Key Features",
+    "multiverseTitle": "Supported Multiverse",
+    "go": {
+      "description": "Location-based reward service. Visit stores and earn TOKAMAK (TON) tokens! Collect stamps for bonus rewards.",
+      "tagline": "Collect TOKAMAK (TON) while walking!",
+      "detailDesc": "Tokamon Go is a location-based reward service where you earn TOKAMAK (TON) tokens by visiting real stores. Find nearby spots on the map, visit to claim tokens, and collect stamps for bonus rewards!",
+      "flow": [
+        { "icon": "\ud83d\uddfa\ufe0f", "title": "Find Spots", "desc": "Check reward spots near you on the map." },
+        { "icon": "\ud83d\udeb6", "title": "Visit Store", "desc": "Go to the store with a spot. Location is verified via GPS." },
+        { "icon": "\ud83e\ude99", "title": "Claim Tokens", "desc": "Tap the Claim button and TOKAMAK (TON) tokens go to your wallet!" },
+        { "icon": "\u2b50", "title": "Stamp Bonus", "desc": "Multiple visits earn stamps, and stamps earn bonus TOKAMAK (TON)!" }
+      ],
+      "features": ["Real-time GPS verification", "Nearby spot map", "Store visit TOKAMAK (TON) rewards", "Stamps & bonuses", "Telegram bot integration", "Store management mode"]
+    },
+    "drop": {
+      "description": "Airdrops by Tokamon! Join various events and earn TOKAMAK (TON) tokens.",
+      "tagline": "TOKAMAK (TON) falls from the sky!",
+      "detailDesc": "Tokamon Drop is a service where you can receive TOKAMAK (TON) token airdrops through various events and campaigns. Earn tokens just by participating in social missions, quizzes, and community activities!",
+      "flow": [
+        { "icon": "\ud83d\udce2", "title": "Check Events", "desc": "See ongoing airdrop events and rewards." },
+        { "icon": "\u2705", "title": "Complete Missions", "desc": "Complete simple missions like social follows, quizzes, and community participation." },
+        { "icon": "\ud83c\udf81", "title": "Claim Rewards", "desc": "TOKAMAK (TON) tokens are automatically distributed after mission completion." },
+        { "icon": "\ud83d\udd14", "title": "Get Notified", "desc": "Never miss new drop events with notifications!" }
+      ],
+      "features": ["Airdrop events", "Social missions & quizzes", "Community rewards", "Auto token distribution", "Event notifications", "Participation history"]
+    },
+    "play": {
+      "description": "Mini-games with Tokamon! Play-to-Earn while having fun with games.",
+      "tagline": "Play to Earn!",
+      "detailDesc": "Tokamon Play is a Play-to-Earn service where you earn TOKAMAK (TON) tokens by playing simple and fun mini-games. Challenge yourself in various games with the Tokamon character!",
+      "flow": [
+        { "icon": "\ud83d\udd79\ufe0f", "title": "Choose a Game", "desc": "Pick from puzzles, arcade, cards, and more mini-games." },
+        { "icon": "\ud83c\udfaf", "title": "Play", "desc": "Simple controls that anyone can enjoy." },
+        { "icon": "\ud83c\udfc6", "title": "Rank Up", "desc": "Compete with other users and climb the rankings." },
+        { "icon": "\ud83d\udcb0", "title": "Earn Rewards", "desc": "Receive TOKAMAK (TON) token rewards based on your game results!" }
+      ],
+      "features": ["Various mini-games", "Simple controls", "Real-time rankings", "TOKAMAK (TON) rewards", "Daily bonus games", "Character skins"]
+    }
+  },
+  "footer": {
+    "tagline": "A cute dinosaur that collects TOKAMAK (TON) tokens",
+    "services": "Services",
+    "community": "Community"
+  }
+}
