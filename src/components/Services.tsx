@@ -30,8 +30,8 @@ const serviceStructure: ServiceStructure[] = [
   {
     id: 'go',
     name: 'Tokamon Go',
-    subdomain: 'go.tokamak.io',
-    url: 'https://go.tokamak.io',
+    subdomain: 'go.tokamon.io',
+    url: 'https://go.tokamon.io',
     status: 'live',
     icon: '\ud83d\udccd',
     color: '#4ade80',

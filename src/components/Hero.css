@@ -121,37 +121,154 @@
   height: 100%;
   top: 0;
   left: 0;
-  animation: orbit-spin 20s linear infinite;
-}
-
-@keyframes orbit-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 .orbit-coin {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--gold-primary), #e6a800);
+  top: 50%;
+  left: 50%;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, var(--gold-primary), #e6a800);
   box-shadow: 0 4px 15px var(--gold-glow);
-  animation: orbit-spin 20s linear infinite reverse;
 }
 
 .orbit-coin span {
   font-family: 'Nunito', sans-serif;
   font-weight: 900;
-  font-size: 1rem;
   color: #5a3e00;
+  display: block;
 }
 
-.coin-1 { top: 5%; left: 50%; transform: translateX(-50%); }
-.coin-2 { bottom: 15%; left: 0%; }
-.coin-3 { bottom: 15%; right: 0%; }
+/* === T, O, K, A — elliptical === */
+/* T — delay 0s */
+.coin-1 {
+  width: 46px; height: 46px; margin: -23px 0 0 -23px;
+  z-index: 1;
+  animation: ellipse-t 24s linear infinite;
+  animation-delay: 0s;
+}
+.coin-1 span { font-size: 1.1rem; animation: spin-cw 7s linear infinite; }
+
+/* O — delay -13s */
+.coin-2 {
+  width: 36px; height: 36px; margin: -18px 0 0 -18px;
+  z-index: 1;
+  animation: ellipse-o 30s linear infinite;
+  animation-delay: -13s;
+}
+.coin-2 span { font-size: 0.85rem; animation: spin-ccw 9s linear infinite; }
+
+/* K — delay -19s */
+.coin-3 {
+  width: 42px; height: 42px; margin: -21px 0 0 -21px;
+  z-index: 1;
+  animation: ellipse-k1 27s linear infinite;
+  animation-delay: -19s;
+}
+.coin-3 span { font-size: 1rem; animation: spin-cw 8s linear infinite; }
+
+/* A — delay -24s */
+.coin-4 {
+  width: 32px; height: 32px; margin: -16px 0 0 -16px;
+  z-index: 1;
+  animation: ellipse-a1 32s linear infinite;
+  animation-delay: -24s;
+}
+.coin-4 span { font-size: 0.8rem; animation: spin-cw 10s linear infinite; }
+
+/* === M, A, K — elliptical === */
+/* M — delay -5s */
+.coin-5 {
+  width: 44px; height: 44px; margin: -22px 0 0 -22px;
+  z-index: 1;
+  animation: ellipse-1 20s linear infinite;
+  animation-delay: -5s;
+}
+.coin-5 span { font-size: 1.05rem; animation: spin-ccw 6s linear infinite; }
+
+/* A — delay -16s */
+.coin-6 {
+  width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  z-index: 1;
+  animation: ellipse-2 26s linear infinite;
+  animation-delay: -16s;
+}
+.coin-6 span { font-size: 0.85rem; animation: spin-cw 8s linear infinite; }
+
+/* K — delay -10s */
+.coin-7 {
+  width: 38px; height: 38px; margin: -19px 0 0 -19px;
+  z-index: 1;
+  animation: ellipse-3 23s linear infinite;
+  animation-delay: -10s;
+}
+.coin-7 span { font-size: 0.9rem; animation: spin-ccw 9s linear infinite; }
+
+/* Elliptical paths — T, O, K, A (각각 다른 타원 크기/기울기) */
+@keyframes ellipse-t {
+  0%   { transform: translate(240px, 0px); }
+  25%  { transform: translate(0px, 140px); }
+  50%  { transform: translate(-240px, 0px); }
+  75%  { transform: translate(0px, -140px); }
+  100% { transform: translate(240px, 0px); }
+}
+@keyframes ellipse-o {
+  0%   { transform: translate(-170px, -130px); }
+  25%  { transform: translate(190px, -100px); }
+  50%  { transform: translate(170px, 130px); }
+  75%  { transform: translate(-190px, 100px); }
+  100% { transform: translate(-170px, -130px); }
+}
+@keyframes ellipse-k1 {
+  0%   { transform: translate(0px, 220px); }
+  25%  { transform: translate(210px, 0px); }
+  50%  { transform: translate(0px, -220px); }
+  75%  { transform: translate(-210px, 0px); }
+  100% { transform: translate(0px, 220px); }
+}
+@keyframes ellipse-a1 {
+  0%   { transform: translate(150px, 160px); }
+  25%  { transform: translate(-180px, 120px); }
+  50%  { transform: translate(-150px, -160px); }
+  75%  { transform: translate(180px, -120px); }
+  100% { transform: translate(150px, 160px); }
+}
+
+/* Elliptical paths — M, A, K */
+@keyframes ellipse-1 {
+  0%   { transform: translate(230px, 0px); }
+  25%  { transform: translate(0px, 130px); }
+  50%  { transform: translate(-230px, 0px); }
+  75%  { transform: translate(0px, -130px); }
+  100% { transform: translate(230px, 0px); }
+}
+@keyframes ellipse-2 {
+  0%   { transform: translate(0px, -150px); }
+  25%  { transform: translate(-200px, 0px); }
+  50%  { transform: translate(0px, 150px); }
+  75%  { transform: translate(200px, 0px); }
+  100% { transform: translate(0px, -150px); }
+}
+@keyframes ellipse-3 {
+  0%   { transform: translate(-180px, -100px); }
+  25%  { transform: translate(160px, -120px); }
+  50%  { transform: translate(180px, 100px); }
+  75%  { transform: translate(-160px, 120px); }
+  100% { transform: translate(-180px, -100px); }
+}
+
+/* Coin self-spin */
+@keyframes spin-cw {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes spin-ccw {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
 
 /* Text */
 .hero-text {
@@ -292,6 +409,10 @@
     height: 260px;
   }
 
+  .hero-coin-orbit {
+    transform: scale(0.72);
+  }
+
   .hero-title {
     font-size: 3rem;
   }
@@ -315,12 +436,7 @@
     height: 200px;
   }
 
-  .orbit-coin {
-    width: 30px;
-    height: 30px;
-  }
-
-  .orbit-coin span {
-    font-size: 0.75rem;
+  .hero-coin-orbit {
+    transform: scale(0.55);
   }
 }

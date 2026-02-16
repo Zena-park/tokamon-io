@@ -30,15 +30,13 @@ export default function Hero() {
             className="hero-mascot"
           />
           <div className="hero-coin-orbit">
-            <div className="orbit-coin coin-1">
-              <span>T</span>
-            </div>
-            <div className="orbit-coin coin-2">
-              <span>O</span>
-            </div>
-            <div className="orbit-coin coin-3">
-              <span>N</span>
-            </div>
+            <div className="orbit-coin coin-1"><span>T</span></div>
+            <div className="orbit-coin coin-2"><span>O</span></div>
+            <div className="orbit-coin coin-3"><span>K</span></div>
+            <div className="orbit-coin coin-4"><span>A</span></div>
+            <div className="orbit-coin coin-5"><span>M</span></div>
+            <div className="orbit-coin coin-6"><span>A</span></div>
+            <div className="orbit-coin coin-7"><span>K</span></div>
           </div>
         </div>
 
