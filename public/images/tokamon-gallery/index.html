@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tokamon Gallery</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0e27;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 48px 20px 24px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #7eb8ff;
+    }
+
+    .project-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 24px 48px;
+    }
+
+    .project-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #4a90d9;
+      border-bottom: 1px solid #1a2444;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      width: 100%;
+    }
+
+    .project-label .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111839;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: default;
+      border: 1px solid #1a2444;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(78, 144, 217, 0.15);
+      border-color: #2a3a66;
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      background: #0d1230;
+      padding: 16px;
+    }
+
+    .card-img.dark-bg {
+      background: #1a1a2e;
+    }
+
+    .card-img.light-bg {
+      background: linear-gradient(135deg, #e8f0fe, #d0e4ff);
+    }
+
+    .card-img.gradient-bg {
+      background: linear-gradient(135deg, #1a0a2e, #2a1040);
+    }
+
+    .card-info {
+      padding: 12px 16px 14px;
+    }
+
+    .card-role {
+      font-size: 14px;
+      font-weight: 600;
+      color: #c8d8f0;
+      margin-bottom: 4px;
+    }
+
+    .card-where {
+      font-size: 11px;
+      color: #5a6a8a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-where .tag {
+      background: #1a2444;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      color: #7a9ac0;
+    }
+
+    .wide {
+      grid-column: span 2;
+    }
+
+    .wide .card-img {
+      aspect-ratio: 2 / 1;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .wide {
+        grid-column: span 2;
+      }
+      .card-img {
+        padding: 10px;
+      }
+      header h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TOKAMON GALLERY</h1>
+  </header>
+
+  <!-- tokamon-io : Landing Page -->
+  <section class="project-section">
+    <div class="project-label">
+      <span class="dot" style="background:#4ae68a;"></span>
+      tokamon.io — Landing Page
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <img class="card-img light-bg" src="../tokamak_dino_friendly.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Hero Mascot</div>
+          <div class="card-where">
+            <span class="tag">Hero.tsx</span> 메인 히어로 섹션
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img dark-bg" src="../tokamak_dino_hq.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Explorer Tokamon</div>
+          <div class="card-where">
+            <span class="tag">About.tsx</span>
+            <span class="tag">Services.tsx</span>
+            Tokamon Go
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="../tokamak_dino.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Coin Tokamon</div>
+          <div class="card-where">
+            <span class="tag">Services.tsx</span> Tokamon Drop
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img gradient-bg" src="../tokamon_gaming.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Gamer Tokamon</div>
+          <div class="card-where">
+            <span class="tag">Services.tsx</span> Tokamon Play
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="../logo-1.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Site Logo</div>
+          <div class="card-where">
+            <span class="tag">Navbar.tsx</span>
+            <span class="tag">Footer.tsx</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- tokamon : Tokamon Go (Web Client) -->
+  <section class="project-section">
+    <div class="project-label">
+      <span class="dot" style="background:#f0c040;"></span>
+      tokamon — Tokamon Go (Web)
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <img class="card-img" src="tokamon-char.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Dino Character</div>
+          <div class="card-where">
+            <span class="tag">DinoCharacter.jsx</span> 게임 캐릭터
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img dark-bg" src="tokamon-icon.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">App Icon</div>
+          <div class="card-where">
+            <span class="tag">client/public</span> 웹 앱 아이콘
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="tokamon-logo.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">App Logo</div>
+          <div class="card-where">
+            <span class="tag">client/public</span> 전신 로고
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- tokamon : Tokamon Go (Mobile App) -->
+  <section class="project-section">
+    <div class="project-label">
+      <span class="dot" style="background:#e06040;"></span>
+      tokamon — Tokamon Go (Mobile App)
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <img class="card-img light-bg" src="tokamon-app-icon.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Mobile App Icon</div>
+          <div class="card-where">
+            <span class="tag">app.config.js</span> iOS/Android 앱 아이콘
+          </div>
+        </div>
+      </div>
+
+      <div class="card wide">
+        <img class="card-img dark-bg" src="splash-bg.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Splash Background</div>
+          <div class="card-where">
+            <span class="tag">IntroScreen.js</span> 앱 시작 화면
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Unused / Backup -->
+  <section class="project-section">
+    <div class="project-label">
+      <span class="dot" style="background:#888;"></span>
+      Backup — 미사용 (소개 페이지 후보)
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <img class="card-img light-bg" src="blue_dino_crypto_1.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Baby Dino</div>
+          <div class="card-where"><span class="tag">backup</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="blue_dino_crypto_logo_1_1.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Circle Dino</div>
+          <div class="card-where"><span class="tag">backup</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="tokamon_logo_3d_v2.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">3D Logo v2</div>
+          <div class="card-where"><span class="tag">backup</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img dark-bg" src="tokamon_logo_arc.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Dark Logo</div>
+          <div class="card-where"><span class="tag">backup</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img" src="tokamon_logo_1.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Ribbon Logo</div>
+          <div class="card-where"><span class="tag">backup</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img gradient-bg" src="tokamon_gaming_1.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">DJ Tokamon</div>
+          <div class="card-where"><span class="tag">backup</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img class="card-img light-bg" src="tokamak_dino_logo_1_1_2.png" alt="" />
+        <div class="card-info">
+          <div class="card-role">Backpack Dino</div>
+          <div class="card-where"><span class="tag">backup</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
