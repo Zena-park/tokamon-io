@@ -21,7 +21,7 @@
       {
         "icon": "\ud83d\udccd",
         "title": "Go - Collect on the Move",
-        "desc": "Visit local stores and earn TOKAMAK (TON) tokens. Collect tokens while walking and get stamp bonuses!"
+        "desc": "Visit local spots and earn TOKAMAK (TON) tokens. Collect tokens while walking and get stamp bonuses!"
       },
       {
         "icon": "\ud83e\ude82",
@@ -43,20 +43,24 @@
     "statusLive": "Live",
     "statusComing": "Coming Soon",
     "ctaStart": "Start {{name}}",
+    "downloadApp": "Download App",
+    "androidDownload": "Android Download",
+    "scanQr": "Scan QR code to download",
+    "iphoneComingSoon": "iPhone version coming soon",
     "flowTitle": "How It Works",
     "featuresTitle": "Key Features",
     "multiverseTitle": "Supported Multiverse",
     "go": {
-      "description": "Location-based reward service. Visit stores and earn TOKAMAK (TON) tokens! Collect stamps for bonus rewards.",
+      "description": "Location-based reward service. Visit spots and earn TOKAMAK (TON) tokens! Collect stamps for bonus rewards.",
       "tagline": "Collect TOKAMAK (TON) while walking!",
-      "detailDesc": "Tokamon Go is a location-based reward service where you earn TOKAMAK (TON) tokens by visiting real stores. Find nearby spots on the map, visit to claim tokens, and collect stamps for bonus rewards!",
+      "detailDesc": "Tokamon Go is a location-based reward service where you earn TOKAMAK (TON) tokens by visiting real spots. Find nearby spots on the map, visit to claim tokens, and collect stamps for bonus rewards!",
       "flow": [
         { "icon": "\ud83d\uddfa\ufe0f", "title": "Find Spots", "desc": "Check reward spots near you on the map." },
-        { "icon": "\ud83d\udeb6", "title": "Visit Store", "desc": "Go to the store with a spot. Location is verified via GPS." },
+        { "icon": "\ud83d\udeb6", "title": "Visit Spot", "desc": "Go to the spot location. Location is verified via GPS." },
         { "icon": "\ud83e\ude99", "title": "Claim Tokens", "desc": "Tap the Claim button and TOKAMAK (TON) tokens go to your wallet!" },
         { "icon": "\u2b50", "title": "Stamp Bonus", "desc": "Multiple visits earn stamps, and stamps earn bonus TOKAMAK (TON)!" }
       ],
-      "features": ["Real-time GPS verification", "Nearby spot map", "Store visit TOKAMAK (TON) rewards", "Stamps & bonuses", "Telegram bot integration", "Store management mode"]
+      "features": ["Real-time GPS verification", "Nearby spot map", "Spot visit TOKAMAK (TON) rewards", "Stamps & bonuses", "Telegram bot integration", "Spot Creator mode"]
     },
     "drop": {
       "description": "Airdrops by Tokamon! Join various events and earn TOKAMAK (TON) tokens.",

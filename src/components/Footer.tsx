@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-brand">
-          <img src="/images/tokamak_dino_logo_1_1.png" alt="Tokamon" className="footer-logo" />
+          <img src="/images/logo-1.png" alt="Tokamon" className="footer-logo" />
           <div>
             <h3 className="footer-title">Tokamon</h3>
             <p className="footer-tagline">{t('footer.tagline') as string}</p>

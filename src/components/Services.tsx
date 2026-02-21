@@ -31,10 +31,10 @@ const serviceStructure: ServiceStructure[] = [
     id: 'go',
     name: 'Tokamon Go',
     subdomain: 'go.tokamon.io',
-    url: 'https://go.tokamon.io',
+    url: 'https://tokamon-go.web.app/',
     status: 'live',
     icon: '\ud83d\udccd',
-    color: '#4ade80',
+    color: '#ec4899',
     heroImage: '/images/tokamak_dino_hq.png',
     networks: [
       { name: 'Thanos', type: 'mainnet', status: 'coming' },
@@ -44,12 +44,12 @@ const serviceStructure: ServiceStructure[] = [
   {
     id: 'drop',
     name: 'Tokamon Drop',
-    subdomain: 'drop.tokamak.io',
+    subdomain: 'drop.tokamon.io',
     url: '#',
     status: 'coming',
     icon: '\ud83e\ude82',
-    color: '#8b5cf6',
-    heroImage: '/images/tokamak_dino_friendly.png',
+    color: '#4ade80',
+    heroImage: '/images/tokamak_dino.png',
     networks: [
       { name: 'Thanos', type: 'mainnet', status: 'coming' },
       { name: 'Thanos Sepolia', type: 'testnet' },
@@ -58,12 +58,12 @@ const serviceStructure: ServiceStructure[] = [
   {
     id: 'play',
     name: 'Tokamon Play',
-    subdomain: 'play.tokamak.io',
+    subdomain: 'play.tokamon.io',
     url: '#',
     status: 'coming',
     icon: '\ud83c\udfae',
-    color: '#ec4899',
-    heroImage: '/images/tokamak_dino.png',
+    color: '#8b5cf6',
+    heroImage: '/images/tokamon_gaming.png',
     networks: [
       { name: 'Thanos', type: 'mainnet', status: 'coming' },
       { name: 'Thanos Sepolia', type: 'testnet' },
@@ -104,8 +104,12 @@ export default function Services() {
     } else {
       setSelectedId(id)
       setTimeout(() => {
-        const el = document.querySelector(`[data-service-id="${id}"]`)
-        el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        if (window.innerWidth <= 900 && detailRef.current) {
+          detailRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        } else {
+          const el = document.querySelector(`[data-service-id="${id}"]`)
+          el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
       }, 100)
     }
   }
@@ -139,7 +143,7 @@ export default function Services() {
                 </span>
               </div>
               <h3 className="service-name">{service.name}</h3>
-              <p className="service-subdomain">{service.subdomain}</p>
+              <p className="service-subdomain">{service.status === 'live' ? service.subdomain : '\u00A0'}</p>
               <p className="service-desc">{service.description}</p>
               <div className="service-networks">
                 {service.networks.map((net) => (
@@ -169,6 +173,27 @@ export default function Services() {
                     <span className="expand-coming-badge">{t('services.statusComing') as string}</span>
                   )}
                 </div>
+                {selected.id === 'go' && (
+                  <div className="app-download-side">
+                    <span className="download-title">{t('services.downloadApp') as string}</span>
+                    <div className="app-download-items">
+                    <a className="download-item android" href="https://expo.dev/accounts/zena.p/projects/tokamon/builds/6c7e5042-003d-4a20-8d5b-0b67a0f89b33" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                      <img src="/images/qr-code/tokamon-go-android.png" alt="Tokamon Go Android QR" className="download-qr" />
+                      <span className="download-label">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.237a.625.625 0 0 0-.803.364l-1.09 2.9a8.37 8.37 0 0 0-7.26 0l-1.09-2.9a.625.625 0 1 0-1.167.44l1.06 2.822A8.332 8.332 0 0 0 3 12.993v.632h18v-.632a8.332 8.332 0 0 0-4.173-6.13l1.06-2.822a.625.625 0 0 0-.364-.804zM8.5 11a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm7 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM3 14.625h18V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5.375z"/></svg>
+                        Android
+                      </span>
+                    </a>
+                    <div className="download-item iphone">
+                      <div className="download-iphone-soon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        <span>iPhone</span>
+                      </div>
+                      <span className="download-soon-text">{t('services.iphoneComingSoon') as string}</span>
+                    </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="expand-flow">
