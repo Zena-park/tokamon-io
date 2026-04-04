@@ -177,8 +177,8 @@ export default function Services() {
                   <div className="app-download-side">
                     <span className="download-title">{t('services.downloadApp') as string}</span>
                     <div className="app-download-items">
-                    <a className="download-item android" href="https://expo.dev/accounts/zena.p/projects/tokamon/builds/826a12b1-d99b-4b38-bce8-f5db381f653a" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                      <img src="/images/qr-code/android-2026-02-25.png" alt="Tokamon Go Android QR" className="download-qr" />
+                    <a className="download-item android" href="https://expo.dev/accounts/zena.p/projects/tokamon/builds/ce5d79e3-73f5-4d86-a1b1-e4b2ca2fcbc7" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                      <img src="/images/qr-code/android-2026-04-04.png" alt="Tokamon Go Android QR" className="download-qr" />
                       <span className="download-label">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.237a.625.625 0 0 0-.803.364l-1.09 2.9a8.37 8.37 0 0 0-7.26 0l-1.09-2.9a.625.625 0 1 0-1.167.44l1.06 2.822A8.332 8.332 0 0 0 3 12.993v.632h18v-.632a8.332 8.332 0 0 0-4.173-6.13l1.06-2.822a.625.625 0 0 0-.364-.804zM8.5 11a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm7 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM3 14.625h18V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5.375z"/></svg>
                         Android
