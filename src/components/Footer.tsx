@@ -18,14 +18,14 @@ export default function Footer() {
         <div className="footer-links">
           <div className="footer-col">
             <h4>{t('footer.services') as string}</h4>
-            <a href="https://go.tokamak.io" target="_blank" rel="noopener noreferrer">Tokamon Go</a>
+            <a href="https://github.com/tokamak-network/tokamon" target="_blank" rel="noopener noreferrer">Tokamon Go</a>
             <span className="footer-coming">Tokamon Drop</span>
             <span className="footer-coming">Tokamon Play</span>
           </div>
           <div className="footer-col">
             <h4>{t('footer.community') as string}</h4>
             <a href="https://t.me/tokamak_network" target="_blank" rel="noopener noreferrer">Telegram</a>
-            <a href="https://github.com/tokamak-network" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/tokamak-network/tokamon-io" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
 
